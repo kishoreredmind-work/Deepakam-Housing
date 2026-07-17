@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7C35A" />
+      <stop offset="100%" stop-color="#F0A830" />
+    </linearGradient>
+  </defs>
+  <!-- Icon Mark (House Roof + Glowing Lamp Flame) -->
+  <g transform="translate(5, 5)">
+    <!-- Outer Navy Shield / Circle -->
+    <rect width="50" height="50" rx="8" fill="#142B52" />
+    <!-- Roof outline -->
+    <path d="M 12 35 L 25 20 L 38 35" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <!-- Flame / Lamp in the center -->
+    <path d="M 25 15 C 22 23 25 32 25 32 C 25 32 28 23 25 15 Z" fill="url(#goldGrad)" />
+    <!-- Base stand -->
+    <path d="M 18 36 L 32 36" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round" />
+  </g>
+  <!-- Company Text -->
+  <text x="68" y="28" font-family="'Quicksand', sans-serif" font-weight="700" font-size="20" fill="#FFFFFF">DEEPΛKΛM</text>
+  <text x="68" y="46" font-family="'Inter', 'Arial', sans-serif" font-weight="600" font-size="12" fill="#F7C35A" letter-spacing="3">HOUSING</text>
+</svg>

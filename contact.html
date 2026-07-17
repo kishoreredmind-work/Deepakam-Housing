@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Deepakam Housing | Enquire About Projects</title>
+  <meta name="description" content="Send us your property inquiry or visit our branch offices in Chennai and Palakkad. Our sales managers are here to assist.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=Quicksand:wght@500;600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=1.1">
+  <link rel="stylesheet" href="css/navbar.css?v=1.1">
+  <link rel="stylesheet" href="css/footer.css?v=1.1">
+  <link rel="stylesheet" href="css/components.css?v=1.1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  
+  <style>
+    .contact-hero {
+      background: linear-gradient(rgba(15, 32, 64, 0.75), rgba(15, 32, 64, 0.75)), url('assets/images/manor.jpg') no-repeat center center/cover;
+      height: 35vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding-top: 110px;
+      margin-top: 0;
+    }
+    .contact-hero__title {
+      font-size: 40px;
+      color: white;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+    .branch-card {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .branch-card__title {
+      color: var(--primary);
+      font-size: 20px;
+      margin-bottom: 12px;
+      font-family: var(--font-body);
+      font-weight: 600;
+    }
+    .branch-card__details {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .branch-card__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      color: var(--secondary-dark);
+      text-decoration: none;
+    }
+    @media (max-width: 992px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .contact-hero {
+        padding-top: 155px !important;
+        padding-bottom: 40px !important;
+        height: auto !important;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .contact-hero {
+        padding-top: 155px !important;
+        padding-bottom: 40px !important;
+        height: auto !important;
+      }
+    }
+  </style>
+
+
+  <!-- Open Graph / Facebook Link Previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Us — Deepakam Housing | Enquire About Projects">
+  <meta property="og:description" content="Send us your property inquiry or visit our branch offices in Chennai and Palakkad. Our sales managers are here to assist.">
+  <meta property="og:image" content="https://demo.deepakam.in/assets/logo.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__container">
+      <div style="position: relative; display: inline-block;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 400 110" width="320" height="88">
+          <defs>
+            <lineargradient id="gold-shimmer" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#F0A830"></stop>
+              <stop offset="25%" stop-color="#FFFFFF"></stop>
+              <stop offset="50%" stop-color="#F0A830"></stop>
+              <stop offset="100%" stop-color="#F0A830"></stop>
+              <animate attributename="x1" from="-1" to="1" dur="2s" repeatcount="indefinite"></animate>
+              <animate attributename="x2" from="0" to="2" dur="2s" repeatcount="indefinite"></animate>
+            </lineargradient>
+          </defs>
+          <text x="50%" y="60" font-family="'Quicksand', sans-serif" font-weight="700" font-size="38" fill="none" stroke="#F0A830" stroke-width="1.5" text-anchor="middle" letter-spacing="8" class="shimmer-text">
+            DEEPΛKΛM
+          </text>
+          <text x="50%" y="60" font-family="'Quicksand', sans-serif" font-weight="700" font-size="38" fill="url(#gold-shimmer)" text-anchor="middle" letter-spacing="8" class="shimmer-text-fill">
+            DEEPΛKΛM
+          </text>
+          <path d="M 80 85 L 180 85 L 195 72 L 210 85 L 320 85" stroke="#F0A830" stroke-width="1.5" fill="none" class="shimmer-line"></path>
+        </svg>
+      </div>
+      <div class="preloader__subtext-luxury">Housing</div>
+    </div>
+  </div>
+
+  <!-- Header Wrapper -->
+  <header class="header">
+    <div class="top-bar">
+      <div class="container top-bar__inner">
+        <div class="top-bar__left">
+          <span class="top-bar__left-icon">❯</span> Have a Project in Mind? <a href="https://wa.me/919188500800" target="_blank" rel="noopener noreferrer">Contact With Us</a>
+        </div>
+        <div class="top-bar__right">
+          <div class="top-bar__info">
+            <i class="bi bi-telephone-fill"></i> Call us: <a href="tel:+919188500800">+91 9188 500 800</a>
+          </div>
+          <div class="top-bar__info">
+            <i class="bi bi-envelope-fill"></i> Send mail: <a href="mailto:emaildeepakam@gmail.com">emaildeepakam@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <nav class="navbar">
+      <div class="container navbar__inner">
+        <a href="./" class="navbar__logo">
+          <img src="assets/logo.png" alt="Deepakam Housing" height="48">
+        </a>
+        <ul class="navbar__links">
+          <li class=""><a href="./">Home</a></li>
+          <li class=""><a href="about.html">About Us</a></li>
+          <li class=""><a href="projects.html">Projects</a></li>
+          <li class=""><a href="testimonials.html">Testimonials</a></li>
+          <li class="active"><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary btn--pill navbar__cta">Enquire Now</a>
+        <button class="navbar__hamburger" id="menuToggle">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="contact-hero">
+    <div class="container">
+      <h1 class="contact-hero__title">Contact Us</h1>
+    </div>
+  </section>
+
+  <!-- Contact Form & Info -->
+  <section class="section">
+    <div class="container contact-grid">
+      <!-- Enquiry Form -->
+      <div class="reveal">
+        <span class="section-label">Enquiry Form</span>
+        <h2 class="section-title" style="margin-bottom: 24px;">Send Us a Message</h2>
+        <form class="enquiry-form" novalidate>
+          <div class="form-group form-group-name">
+            <label class="form-label" for="name">Full Name *</label>
+            <input type="text" id="name" class="form-control" placeholder="Your name" required>
+            <span class="error-msg">Please enter your name</span>
+          </div>
+          
+          <div class="form-group form-group-phone">
+            <label class="form-label" for="phone">Phone Number *</label>
+            <input type="tel" id="phone" class="form-control" placeholder="10-digit number" required>
+            <span class="error-msg">Please enter a valid 10-digit mobile number</span>
+          </div>
+          
+          <div class="form-group form-group-email">
+            <label class="form-label" for="email">Email Address *</label>
+            <input type="email" id="email" class="form-control" placeholder="Your email address" required>
+            <span class="error-msg">Please enter a valid email address</span>
+          </div>
+          
+          <div class="form-group form-group-message">
+            <label class="form-label" for="message">Message *</label>
+            <textarea id="message" rows="5" class="form-control" placeholder="Your message or project interest" required></textarea>
+            <span class="error-msg">Please write down your enquiry details</span>
+          </div>
+          
+          <button type="submit" class="btn btn--primary btn--full btn--pill" style="margin-top: 10px;">Submit Enquiry</button>
+          
+          <div class="success-msg" style="display: none; background-color: var(--success); color: white; padding: 15px; border-radius: var(--radius-sm); margin-top: 20px; font-weight: 500; text-align: center;">
+            ✓ Thank you! Your request has been sent successfully. We will get back to you shortly.
+          </div>
+        </form>
+      </div>
+
+      <!-- Branch Info -->
+      <div class="reveal" style="transition-delay: 0.1s;">
+        <span class="section-label">Our Offices</span>
+        <h2 class="section-title" style="margin-bottom: 24px;">Contact Details</h2>
+        
+        <!-- Chennai -->
+        <div class="branch-card">
+          <h3 class="branch-card__title"></h3><i class="bi bi-geo-alt-fill"></i> Chennai Office
+          <p class="branch-card__details">
+            Deepakam Apartments, Ambal Nagar,<br>
+            Pallikaranai, Chennai - 600100<br>
+            Tamil Nadu, India
+          </p>
+          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="branch-card__link">View on Google Maps →</a>
+        </div>
+
+        <!-- Palakkad -->
+        <div class="branch-card">
+          <h3 class="branch-card__title"></h3><i class="bi bi-geo-alt-fill"></i> Palakkad Office
+          <p class="branch-card__details">
+            Deepakam Inn,<br>
+            Stadium Bypass Road,<br>
+            Palakkad, Kerala, India
+          </p>
+          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="branch-card__link">View on Google Maps →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid row g-4">
+        <div class="footer__col-about col-12 col-lg-4">
+          <a href="./" class="footer__logo" style="display: inline-block; margin-bottom: 20px;">
+            <img src="assets/logo.png" alt="Deepakam Housing" height="65">
+          </a>
+          <p class="footer__tagline">Building Homes, Delivering Dreams. Trusted developer of high-quality apartments and independent villas in Tamil Nadu and Kerala since 2011.</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="footer__social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+          <h4 class="footer__title">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="./">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <h4 class="footer__title">Our Projects</h4>
+          <ul class="footer__links">
+            <li><a href="project-muttikulangara.html">Villa DEEP<span class="logo-a">V</span>K<span class="logo-a">V</span>M — Muttikulangara - Palakkad</a></li>
+            <li><a href="project-villa.html">Villa Deepakam - Kannadi - Palakkad</a></li>
+            <li><a href="project-one.html">Deepakam ONE</a></li>
+            <li><a href="project-manor.html">Deepakam Manor</a></li>
+            <li><a href="project-greens.html">Deepakam Greens</a></li>
+            <li><a href="project-gardens.html">Deepakam Gardens</a></li>
+            <li><a href="project-apartments.html">Deepakam Apartments</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-12 col-md-4 col-lg-3">
+          <h4 class="footer__title">Contact Info</h4>
+          <div class="footer__contact-info">
+            <div class="footer__office">
+              <span class="footer__office-icon"><i class="bi bi-geo-alt-fill"></i> </span>
+              <div class="footer__office-details">
+                <h5>Chennai Office</h5>
+                <p>Deepakam Apartments, Ambal Nagar, Pallikaranai, Chennai - 600100</p>
+              </div>
+            </div>
+            <div class="footer__office">
+              <span class="footer__office-icon"><i class="bi bi-geo-alt-fill"></i> </span>
+              <div class="footer__office-details">
+                <h5>Palakkad Office</h5>
+                <p>Deepakam Inn, Stadium Bypass Road, Palakkad, Kerala</p>
+              </div>
+            </div>
+            <div class="footer__office">
+              <span class="footer__office-icon"><i class="bi bi-telephone-fill"></i> </span>
+              <div class="footer__office-details">
+                <h5>Direct Hotline</h5>
+                <a href="tel:+919188500800">9188 500 800</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p class="footer__copyright">© <span class="copyright-year">2026</span> Deepakam Housing Private Limited. All rights reserved. Developed by <a href="https://redmindtechnologies.com" target="_blank" rel="noopener noreferrer" style="color: var(--secondary); font-weight: 600; text-decoration: none; border-bottom: 1px dashed var(--secondary);">RedMind Technologies</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky WhatsApp Button -->
+  <a href="https://wa.me/919188500800" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Mobile Bottom Action Bar -->
+  <div class="mobile-action-bar">
+    <a href="tel:+919188500800" class="mobile-action-btn">
+      <i class="bi bi-telephone-fill"></i> Call Now
+    </a>
+    <a href="contact.html" class="mobile-action-btn">
+      <i class="bi bi-envelope-fill"></i> Enquire Now
+    </a>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    ↑
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/main.js?v=1.1"></script>
+  
+</body>
+</html>
