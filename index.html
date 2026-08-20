@@ -163,9 +163,37 @@
     }
 
     @media (max-width: 992px) {
-      .hero__poster-side {
-        display: none !important; /* hide poster on mobile/tablet to avoid vertical squeeze */
+      /* Hide the text content on mobile/tablet for Slide 1 & Slide 2 to make room for the posters */
+      .slide:nth-child(1) .hero__content,
+      .slide:nth-child(2) .hero__content {
+        display: none !important;
       }
+      
+      /* Make the poster container fill the mobile layout */
+      .hero__poster-side {
+        display: flex !important;
+        flex: 1 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        justify-content: center !important;
+        align-items: center !important;
+        transform: none !important;
+        opacity: 1 !important;
+      }
+      
+      .hero__poster-link {
+        max-width: 90vw !important;
+        max-height: 52vh !important;
+        border-radius: 12px !important;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25) !important;
+      }
+      
+      .hero__poster-link img {
+        max-height: 52vh !important;
+        object-fit: contain !important;
+        width: auto !important;
+      }
+
       .hero__container-split {
         justify-content: center;
         padding-top: 130px;
