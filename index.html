@@ -109,18 +109,52 @@
       }
     }
 
-    /* Poster slide custom backgrounds */
+    /* Redesigned Poster Slides Layout */
     .slide--poster-1 {
-      background-color: #0b1a37 !important;
+      background-color: #0b1c3f !important;
     }
     .slide--poster-2 {
       background-color: #f7a604 !important;
     }
+    .slide-poster-container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 140px; /* clear header */
+      padding-bottom: 76px; /* clear dots */
+    }
+    .slide-poster-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-height: 100%;
+      max-width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+      transition: transform 0.3s ease;
+    }
+    .slide-poster-link:hover {
+      transform: scale(1.02);
+    }
+    .slide-poster-link img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
     @media (max-width: 768px) {
-      .slide--poster-1,
-      .slide--poster-2 {
-        background-size: contain !important;
-        background-position: center !important;
+      .slide-poster-container {
+        padding-top: 145px; /* clear mobile header */
+        padding-bottom: 96px; /* clear mobile dots */
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      .slide-poster-link {
+        border-radius: 12px;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
       }
     }
 
@@ -655,16 +689,20 @@
   <!-- Hero Section with Dynamic Slider -->
   <section class="hero-slider">
     <!-- Slide 1 (Poster 1) -->
-    <div class="slide active slide--poster-1" style="background-image: url('assets/images/poster_1.jpg');">
-      <div class="container" style="height: 100%; position: relative;">
-        <a href="project-muttikulangara.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5;" aria-label="Explore Villa Deepakam Muttikulangara Palakkad"></a>
+    <div class="slide active slide--poster-1">
+      <div class="container slide-poster-container">
+        <a href="project-muttikulangara.html" class="slide-poster-link" aria-label="Explore Villa Deepakam Muttikulangara Palakkad">
+          <img src="assets/images/poster_1.jpg" alt="Villa Deepakam - Muttikulangara Palakkad ready to move in independent villas">
+        </a>
       </div>
     </div>
 
     <!-- Slide 2 (Poster 2) -->
-    <div class="slide slide--poster-2" style="background-image: url('assets/images/poster_2.jpg');">
-      <div class="container" style="height: 100%; position: relative;">
-        <a href="project-muttikulangara.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5;" aria-label="Explore Villa Deepakam Muttikulangara Palakkad"></a>
+    <div class="slide slide--poster-2">
+      <div class="container slide-poster-container">
+        <a href="project-muttikulangara.html" class="slide-poster-link" aria-label="Explore Villa Deepakam Muttikulangara Palakkad">
+          <img src="assets/images/poster_2.jpg" alt="Villa Deepakam - Muttikulangara Palakkad ready to move in independent villas">
+        </a>
       </div>
     </div>
 
