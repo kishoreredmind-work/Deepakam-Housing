@@ -109,6 +109,85 @@
       }
     }
 
+    /* Split-screen Hero Slider Layout */
+    .hero-slider {
+      background-color: var(--primary) !important;
+    }
+    
+    .hero-slider .slide {
+      background: linear-gradient(135deg, #0f2040 0%, #1e3a6e 100%) !important;
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    .hero__container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero__row {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .hero__col-text {
+      flex: 1.2;
+      max-width: 600px;
+    }
+
+    .hero__col-poster {
+      flex: 0.8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: translateX(50px);
+      transition: opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s;
+    }
+
+    .hero-slider .slide.active .hero__col-poster {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .hero__poster {
+      max-width: 100%;
+      max-height: 65dvh;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      object-fit: contain;
+      transition: transform 0.5s ease;
+    }
+
+    .hero__poster:hover {
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 991px) {
+      .hero__row {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+      .hero__col-text {
+        max-width: 100%;
+      }
+      .hero__col-poster {
+        transform: translateY(30px);
+      }
+      .hero-slider .slide.active .hero__col-poster {
+        transform: translateY(0);
+      }
+      .hero__poster {
+        max-height: 32vh !important;
+      }
+    }
+
+
 
     /* Stats Bar Custom */
     .stats-bar {
@@ -640,45 +719,66 @@
   <!-- Hero Section with Dynamic Slider -->
   <section class="hero-slider">
     <!-- Slide 1 -->
-    <div class="slide active" style="background-image: linear-gradient(rgba(15, 32, 64, 0.65), rgba(15, 32, 64, 0.65)), url('assets/images/street_view_a.jpeg');">
-      <div class="container">
-        <div class="hero__content">
-          <span class="hero__label">Featured Project — Gated Independent Villas</span>
-          <h1 class="hero__title">Villa DEEP<span class="logo-a">V</span>K<span class="logo-a">V</span>M — Muttikulangara</h1>
-          <p class="hero__subtitle">Premium 3 & 4 BHK independent luxury villas in Palakkad, Kerala. Built with traditional aesthetics, certified structure, and ready to move in immediately.</p>
-          <div class="hero__buttons">
-            <a href="project-muttikulangara.html" class="btn btn--primary btn--pill">Explore Project</a>
-            <a href="contact.html" class="btn btn--ghost btn--pill">Enquire Now</a>
+    <div class="slide active">
+      <div class="container hero__container">
+        <div class="hero__row">
+          <div class="hero__col-text">
+            <div class="hero__content">
+              <span class="hero__label">Featured Project — Gated Independent Villas</span>
+              <h1 class="hero__title">Villa DEEP<span class="logo-a">V</span>K<span class="logo-a">V</span>M — Muttikulangara</h1>
+              <p class="hero__subtitle">Premium 3 & 4 BHK independent luxury villas in Palakkad, Kerala. Built with traditional aesthetics, certified structure, and ready to move in immediately.</p>
+              <div class="hero__buttons">
+                <a href="project-muttikulangara.html" class="btn btn--primary btn--pill">Explore Project</a>
+                <a href="contact.html" class="btn btn--ghost btn--pill">Enquire Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero__col-poster">
+            <img src="assets/images/poster_blue.jpg" alt="Villa Deepakam Palakkad Blue Flyer" class="hero__poster">
           </div>
         </div>
       </div>
     </div>
 
     <!-- Slide 2 -->
-    <div class="slide" style="background-image: linear-gradient(rgba(15, 32, 64, 0.65), rgba(15, 32, 64, 0.65)), url('assets/images/villa_1b.jpeg');">
-      <div class="container">
-        <div class="hero__content">
-          <span class="hero__label">Traditional Kerala Sloping Roof Style</span>
-          <h1 class="hero__title">Designed for Quality Living</h1>
-          <p class="hero__subtitle">Featuring private compound gardens, solid teak wood main doors, UPVC windows, and independent service connections in a gated layout.</p>
-          <div class="hero__buttons">
-            <a href="project-muttikulangara.html" class="btn btn--primary btn--pill">View Specifications</a>
-            <a href="contact.html" class="btn btn--ghost btn--pill">Schedule Visit</a>
+    <div class="slide">
+      <div class="container hero__container">
+        <div class="hero__row">
+          <div class="hero__col-text">
+            <div class="hero__content">
+              <span class="hero__label">Traditional Kerala Sloping Roof Style</span>
+              <h1 class="hero__title">Designed for Quality Living</h1>
+              <p class="hero__subtitle">Featuring private compound gardens, solid teak wood main doors, UPVC windows, and independent service connections in a gated layout.</p>
+              <div class="hero__buttons">
+                <a href="project-muttikulangara.html" class="btn btn--primary btn--pill">View Specifications</a>
+                <a href="contact.html" class="btn btn--ghost btn--pill">Schedule Visit</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero__col-poster">
+            <img src="assets/images/poster_yellow.jpg" alt="Villa Deepakam Palakkad Yellow Flyer" class="hero__poster">
           </div>
         </div>
       </div>
     </div>
 
     <!-- Slide 3 -->
-    <div class="slide" style="background-image: linear-gradient(rgba(15, 32, 64, 0.65), rgba(15, 32, 64, 0.65)), url('assets/images/villa_2b.jpeg');">
-      <div class="container">
-        <div class="hero__content">
-          <span class="hero__label">Limited Units Available for Sales</span>
-          <h1 class="hero__title">Last Few 3 BHK Villas Remaining</h1>
-          <p class="hero__subtitle">Completed ready-to-move community with 80% bank loan approval and completion certificate received. 4 BHK units are completely sold out.</p>
-          <div class="hero__buttons">
-            <a href="project-muttikulangara.html" class="btn btn--primary btn--pill">Book Site Visit</a>
-            <a href="contact.html" class="btn btn--ghost btn--pill">Get Pricing</a>
+    <div class="slide">
+      <div class="container hero__container">
+        <div class="hero__row">
+          <div class="hero__col-text">
+            <div class="hero__content">
+              <span class="hero__label">Limited Units Available for Sales</span>
+              <h1 class="hero__title">Last Few 3 BHK Villas Remaining</h1>
+              <p class="hero__subtitle">Completed ready-to-move community with 80% bank loan approval and completion certificate received. 4 BHK units are completely sold out.</p>
+              <div class="hero__buttons">
+                <a href="project-muttikulangara.html" class="btn btn--primary btn--pill">Book Site Visit</a>
+                <a href="contact.html" class="btn btn--ghost btn--pill">Get Pricing</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero__col-poster">
+            <img src="assets/images/street_view_a.jpeg" alt="Villa Deepakam Real View" class="hero__poster">
           </div>
         </div>
       </div>
