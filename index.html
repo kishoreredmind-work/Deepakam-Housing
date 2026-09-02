@@ -109,7 +109,18 @@
       }
     }
 
-    /* Hero split container styling */
+    /* Hero Full Slider & Split container styling */
+    .slide--full-poster {
+      background-size: contain !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+    }
+    .slide--poster-1 {
+      background-color: #0b1c3f !important;
+    }
+    .slide--poster-2 {
+      background-color: #f7a604 !important;
+    }
     .hero__container-split {
       display: flex !important;
       align-items: center;
@@ -117,83 +128,14 @@
       gap: 50px;
       width: 100%;
       height: 100%;
-      padding-top: 140px; /* clear header */
-      padding-bottom: 76px; /* clear dots */
+      padding-top: 140px;
+      padding-bottom: 76px;
     }
-
     .hero__content {
       flex: 1.2;
       max-width: 600px;
     }
-
-    .hero__poster-side {
-      flex: 0.8;
-      max-width: 440px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transform: translateX(30px);
-      transition: opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s;
-    }
-
-    .slide.active .hero__poster-side {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .hero__poster-link {
-      display: block;
-      width: 100%;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
-      transition: transform 0.3s ease;
-    }
-
-    .hero__poster-link:hover {
-      transform: scale(1.03);
-    }
-
-    .hero__poster-link img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;
-    }
-
     @media (max-width: 992px) {
-      /* Hide the text content on mobile/tablet for Slide 1 & Slide 2 to make room for the posters */
-      .slide:nth-child(1) .hero__content,
-      .slide:nth-child(2) .hero__content {
-        display: none !important;
-      }
-      
-      /* Make the poster container fill the mobile layout */
-      .hero__poster-side {
-        display: flex !important;
-        flex: 1 !important;
-        max-width: 100% !important;
-        width: 100% !important;
-        justify-content: center !important;
-        align-items: center !important;
-        transform: none !important;
-        opacity: 1 !important;
-      }
-      
-      .hero__poster-link {
-        max-width: 90vw !important;
-        max-height: 52vh !important;
-        border-radius: 12px !important;
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25) !important;
-      }
-      
-      .hero__poster-link img {
-        max-height: 52vh !important;
-        object-fit: contain !important;
-        width: auto !important;
-      }
-
       .hero__container-split {
         justify-content: center;
         padding-top: 130px;
@@ -204,7 +146,6 @@
         flex: 1;
       }
     }
-
 
     /* Stats Bar Custom */
     .stats-bar {
@@ -708,7 +649,7 @@
             <i class="bi bi-telephone-fill"></i> Call us: <a href="tel:+919188500800">+91 9188 500 800</a>
           </div>
           <div class="top-bar__info">
-            <i class="bi bi-envelope-fill"></i> Send mail: <a href="mailto:emaildeepakam@gmail.com">emaildeepakam@gmail.com</a>
+            <i class="bi bi-envelope-fill"></i> Email: <a href="mailto:emaildeepakam@gmail.com">emaildeepakam@gmail.com</a>
           </div>
         </div>
       </div>
@@ -735,27 +676,32 @@
 
   <!-- Hero Section with Dynamic Slider -->
   <section class="hero-slider">
-    <!-- Slide 1 (Muttikulangara Text + Poster 1) -->
-    <div class="slide active" style="background-image: linear-gradient(rgba(15, 32, 64, 0.75), rgba(15, 32, 64, 0.75)), url('assets/images/street_view_a.jpeg');">
+    <!-- Slide 1 (Poster 1 Full Slider) -->
+    <div class="slide active slide--full-poster slide--poster-1" style="background-image: url('assets/images/poster_1.jpg');">
+      <a href="project-muttikulangara.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5;" aria-label="Explore Villa Deepakam Muttikulangara Palakkad"></a>
+    </div>
+
+    <!-- Slide 2 (Poster 2 Full Slider) -->
+    <div class="slide slide--full-poster slide--poster-2" style="background-image: url('assets/images/poster_2.jpg');">
+      <a href="project-muttikulangara.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5;" aria-label="Explore Villa Deepakam Muttikulangara Palakkad"></a>
+    </div>
+
+    <!-- Slide 3 (3 BED ROOM VILLAS Text) -->
+    <div class="slide" style="background-image: linear-gradient(rgba(15, 32, 64, 0.75), rgba(15, 32, 64, 0.75)), url('assets/images/street_view_a.jpeg');">
       <div class="container hero__container-split">
         <div class="hero__content">
           <span class="hero__label">Featured Project — Gated Independent Villas</span>
-          <h1 class="hero__title">Villa DEEP<span class="logo-a">V</span>K<span class="logo-a">V</span>M — Muttikulangara</h1>
-          <p class="hero__subtitle">Premium 3 & 4 BHK independent luxury villas in Palakkad, Kerala. Built with traditional aesthetics, certified structure, and ready to move in immediately.</p>
+          <h1 class="hero__title">3 BED ROOM VILLAS — Muttikulangara</h1>
+          <p class="hero__subtitle">Completed & Ready to Move • 80% Bank Loan Approved • BCC Received. Premium independent luxury villas in Palakkad, Kerala.</p>
           <div class="hero__buttons">
             <a href="project-muttikulangara.html" class="btn btn--primary btn--pill">Explore Project</a>
             <a href="contact.html" class="btn btn--ghost btn--pill">Enquire Now</a>
           </div>
         </div>
-        <div class="hero__poster-side">
-          <a href="project-muttikulangara.html" class="hero__poster-link" aria-label="Explore Villa Deepakam Muttikulangara Palakkad">
-            <img src="assets/images/poster_1.jpg" alt="Villa Deepakam - Muttikulangara Palakkad ready to move poster">
-          </a>
-        </div>
       </div>
     </div>
 
-    <!-- Slide 2 (Specs Text + Poster 2) -->
+    <!-- Slide 4 (Designed for Quality Living Text) -->
     <div class="slide" style="background-image: linear-gradient(rgba(15, 32, 64, 0.75), rgba(15, 32, 64, 0.75)), url('assets/images/villa_1b.jpeg');">
       <div class="container hero__container-split">
         <div class="hero__content">
@@ -767,32 +713,13 @@
             <a href="contact.html" class="btn btn--ghost btn--pill">Schedule Visit</a>
           </div>
         </div>
-        <div class="hero__poster-side">
-          <a href="project-muttikulangara.html" class="hero__poster-link" aria-label="Explore Villa Deepakam Muttikulangara Palakkad">
-            <img src="assets/images/poster_2.jpg" alt="Villa Deepakam - Muttikulangara Palakkad ready to move poster">
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 3 (Limited Units Text - No Poster) -->
-    <div class="slide" style="background-image: linear-gradient(rgba(15, 32, 64, 0.75), rgba(15, 32, 64, 0.75)), url('assets/images/villa_2b.jpeg');">
-      <div class="container hero__container-split">
-        <div class="hero__content">
-          <span class="hero__label">Limited Units Available for Sales</span>
-          <h1 class="hero__title">Last Few 3 BHK Villas Remaining</h1>
-          <p class="hero__subtitle">Completed ready-to-move community with 80% bank loan approval and completion certificate received. 4 BHK units are completely sold out.</p>
-          <div class="hero__buttons">
-            <a href="project-muttikulangara.html" class="btn btn--primary btn--pill">Book Site Visit</a>
-            <a href="contact.html" class="btn btn--ghost btn--pill">Get Pricing</a>
-          </div>
-        </div>
       </div>
     </div>
 
     <!-- Dots navigation -->
     <div class="slider-dots">
       <span class="slider-dot active"></span>
+      <span class="slider-dot"></span>
       <span class="slider-dot"></span>
       <span class="slider-dot"></span>
     </div>
@@ -804,7 +731,7 @@
   <section class="stats-bar" id="stats">
     <div class="container stats-bar__inner">
       <div class="stat-card">
-        <div class="stat-card__number" data-target="8" data-suffix="+">0</div>
+        <div class="stat-card__number" data-target="9" data-suffix="+">0</div>
         <div class="stat-card__label">Projects Completed</div>
       </div>
       <div class="stats-bar__divider"></div>
@@ -814,7 +741,7 @@
       </div>
       <div class="stats-bar__divider"></div>
       <div class="stat-card">
-        <div class="stat-card__number" data-target="13" data-suffix="+">0</div>
+        <div class="stat-card__number" data-target="16" data-suffix="+">0</div>
         <div class="stat-card__label">Years of Excellence</div>
       </div>
       <div class="stats-bar__divider"></div>
@@ -1104,7 +1031,7 @@
           <a href="./" class="footer__logo" style="display: inline-block; margin-bottom: 20px;">
             <img src="assets/logo.png" alt="Deepakam Housing" height="65">
           </a>
-          <p class="footer__tagline">Building Homes, Delivering Dreams. Trusted developer of high-quality apartments and independent villas in Tamil Nadu and Kerala since 2011.</p>
+          <p class="footer__tagline">Building Homes, Delivering Dreams. Trusted developer of high-quality apartments and independent villas in Tamil Nadu and Kerala since 2010.</p>
           <div class="footer__socials">
             <a href="#" class="footer__social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" class="footer__social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
