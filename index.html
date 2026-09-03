@@ -109,17 +109,40 @@
       }
     }
 
-    /* Hero Full Slider & Split container styling */
-    .slide--full-poster {
-      background-size: contain !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-    }
+    /* Hero Slider & Poster container styling */
     .slide--poster-1 {
       background-color: #0b1c3f !important;
     }
     .slide--poster-2 {
       background-color: #f7a604 !important;
+    }
+    .slide-poster-container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 140px; /* Clear blue header completely */
+      padding-bottom: 76px; /* Clear dots navigation */
+    }
+    .slide-poster-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-height: 100%;
+      max-width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+      transition: transform 0.3s ease;
+    }
+    .slide-poster-link:hover {
+      transform: scale(1.02);
+    }
+    .slide-poster-link img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
     }
     .hero__container-split {
       display: flex !important;
@@ -133,9 +156,19 @@
     }
     .hero__content {
       flex: 1.2;
-      max-width: 600px;
+      max-width: 650px;
     }
     @media (max-width: 992px) {
+      .slide-poster-container {
+        padding-top: 145px;
+        padding-bottom: 96px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      .slide-poster-link {
+        border-radius: 12px;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+      }
       .hero__container-split {
         justify-content: center;
         padding-top: 130px;
@@ -676,22 +709,21 @@
 
   <!-- Hero Section with Dynamic Slider -->
   <section class="hero-slider">
-    <!-- Slide 1 (Poster 1 Full Slider) -->
-    <div class="slide active slide--full-poster slide--poster-1" style="background-image: url('assets/images/poster_1.jpg');">
-      <a href="project-muttikulangara.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5;" aria-label="Explore Villa Deepakam Muttikulangara Palakkad"></a>
+    <!-- Slide 1: Poster 1 (Blue Poster) -->
+    <div class="slide active slide--poster-1">
+      <div class="container slide-poster-container">
+        <a href="project-muttikulangara.html" class="slide-poster-link" aria-label="Explore Villa Deepakam Muttikulangara Palakkad">
+          <img src="assets/images/poster_1.jpg" alt="Villa Deepakam - Muttikulangara Palakkad ready to move in independent villas">
+        </a>
+      </div>
     </div>
 
-    <!-- Slide 2 (Poster 2 Full Slider) -->
-    <div class="slide slide--full-poster slide--poster-2" style="background-image: url('assets/images/poster_2.jpg');">
-      <a href="project-muttikulangara.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5;" aria-label="Explore Villa Deepakam Muttikulangara Palakkad"></a>
-    </div>
-
-    <!-- Slide 3 (3 BED ROOM VILLAS Text) -->
+    <!-- Slide 2: Muttikulangara Text Slide -->
     <div class="slide" style="background-image: linear-gradient(rgba(15, 32, 64, 0.75), rgba(15, 32, 64, 0.75)), url('assets/images/street_view_a.jpeg');">
       <div class="container hero__container-split">
         <div class="hero__content">
           <span class="hero__label">Featured Project — Gated Independent Villas</span>
-          <h1 class="hero__title">3 BED ROOM VILLAS — Muttikulangara</h1>
+          <h1 class="hero__title">Villa DEEP<span class="logo-a">V</span>K<span class="logo-a">V</span>M — Muttikulangara</h1>
           <p class="hero__subtitle">Completed & Ready to Move • 80% Bank Loan Approved • BCC Received. Premium independent luxury villas in Palakkad, Kerala.</p>
           <div class="hero__buttons">
             <a href="project-muttikulangara.html" class="btn btn--primary btn--pill">Explore Project</a>
@@ -701,7 +733,16 @@
       </div>
     </div>
 
-    <!-- Slide 4 (Designed for Quality Living Text) -->
+    <!-- Slide 3: Poster 2 (Yellow Poster) -->
+    <div class="slide slide--poster-2">
+      <div class="container slide-poster-container">
+        <a href="project-muttikulangara.html" class="slide-poster-link" aria-label="Explore Villa Deepakam Muttikulangara Palakkad">
+          <img src="assets/images/poster_2.jpg" alt="Villa Deepakam - Muttikulangara Palakkad ready to move in independent villas">
+        </a>
+      </div>
+    </div>
+
+    <!-- Slide 4: Quality Living Text Slide -->
     <div class="slide" style="background-image: linear-gradient(rgba(15, 32, 64, 0.75), rgba(15, 32, 64, 0.75)), url('assets/images/villa_1b.jpeg');">
       <div class="container hero__container-split">
         <div class="hero__content">
