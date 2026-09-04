@@ -418,7 +418,9 @@ img {
 /* Hero Slider Styles */
 .hero-slider {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 140px);
+  min-height: 520px;
+  max-height: 780px;
   width: 100%;
   overflow: hidden;
   color: white;
