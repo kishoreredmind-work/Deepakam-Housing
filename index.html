@@ -118,29 +118,33 @@
     }
     .slide-poster-container {
       height: 100%;
+      width: 100%;
       display: flex;
       align-items: center !important;
       justify-content: center !important;
-      padding-top: 148px !important; /* Safe gap below header navbar */
-      padding-bottom: 76px !important; /* Safe gap above bottom controls */
+      padding-top: 130px !important; /* Safe gap below header navbar */
+      padding-bottom: 60px !important; /* Safe gap above slider controls/dots */
+      box-sizing: border-box !important;
     }
     .slide-poster-link {
       display: flex;
       align-items: center;
       justify-content: center;
-      max-height: 100%;
+      max-height: calc(100vh - 190px) !important;
       max-width: 100%;
       border-radius: 0px !important;
-      overflow: visible !important;
+      overflow: hidden !important;
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
       transition: transform 0.3s ease;
     }
     .slide-poster-link:hover {
-      transform: scale(1.02);
+      transform: scale(1.01);
     }
     .slide-poster-link img {
-      max-height: 100%;
+      max-height: calc(100vh - 190px) !important;
       max-width: 100%;
+      width: auto;
+      height: auto;
       object-fit: contain;
       display: block;
       border-radius: 0px !important;
