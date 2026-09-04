@@ -1,8 +1,6 @@
 /* Header Wrapper & Top Bar Styles */
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   z-index: 1000;
   transition: var(--transition);
